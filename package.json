@@ -26,11 +26,15 @@
   },
   "dependencies": {
     "babel-preset-stage-1": "^6.1.18",
+    "jss-rtl": "^0.2.3",
     "lodash": "^3.10.1",
+    "material-ui": "^0.20.0",
     "react": "16.3.2",
     "react-dom": "16.3.2",
     "react-redux": "5.0.7",
     "react-router": "^2.0.1",
-    "redux": "4.0.0"
+    "react-router-dom": "^4.2.2",
+    "redux": "4.0.0",
+    "redux-promise": "^0.5.3"
   }
 }
