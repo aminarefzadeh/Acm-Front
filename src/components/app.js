@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
-import AppBar from 'material-ui/AppBar';
+import ResponsiveDrawer from './drawer_responsive';
 
 export default class App extends Component {
   render() {
     return (
       <div>
-        <AppBar
-          title="شاخه‌ی دانش‌جویی ACM دانشگاه تهران"
-          iconClassNameRight="muidocs-icon-navigation-expand-more"
-        />
-
+        <ResponsiveDrawer />
       </div>
     );
   }
