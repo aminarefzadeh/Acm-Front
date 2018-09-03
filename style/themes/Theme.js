@@ -1,4 +1,4 @@
-import amber from '@material-ui/core/colors/amber';
+import indigo from '@material-ui/core/colors/indigo';
 
 const font = "IRANSans";
 
@@ -9,7 +9,7 @@ const Theme = {
     },
     palette: {
         type: 'light',
-        primary: amber,
+        primary: indigo,
     },
 }
 

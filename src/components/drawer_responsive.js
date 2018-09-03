@@ -11,6 +11,7 @@ import Hidden from '@material-ui/core/Hidden';
 import Divider from '@material-ui/core/Divider';
 import MenuIcon from '@material-ui/icons/Menu';
 import Paper from '@material-ui/core/Paper';
+import Login from './login';
 
 const drawerWidth = 240;
 
@@ -28,10 +29,10 @@ const styles = theme => ({
     position: 'absolute',
     [theme.breakpoints.up('md')]: {
       width: `calc(100% - ${drawerWidth}px)`,
-      marginRight: drawerWidth,
+      marginLeft: drawerWidth,
     },
     [theme.breakpoints.down('sm')]: {
-      marginRight: 0,
+      marginLeft: 0,
     },
   },
   navIconHide: {
@@ -68,10 +69,10 @@ class ResponsiveDrawer extends React.Component {
     const { classes, theme } = this.props;
 
     const drawer = (
-      <div>
+      <div style={{height: '100%'}}>
         <div className={classes.toolbar} />
-        <div>
-          <Paper style={{justifyContent: 'center'}} elevation={1}>
+        <div style={{height: '100%'}}>
+          <Paper style={{justifyContent: 'center', height: '100%'}} elevation={1}>
             <Typography variant="body1" align="center" component="p">
               اطلاعات کاربر
             </Typography>
@@ -92,7 +93,7 @@ class ResponsiveDrawer extends React.Component {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="title" color="inherit" noWrap>
+            <Typography variant="title" color="inherit" noWrap style={{ lineHeight: 'inherit' }}>
               شاخه‌ی دانش‌جویی ACM دانشگاه تهران
             </Typography>
             
@@ -108,7 +109,7 @@ class ResponsiveDrawer extends React.Component {
               paper: classes.drawerPaper,
             }}
             ModalProps={{
-              keepMounted: true, // Better open performance on mobile.
+              keepMounted: true,
             }}
           >
             {drawer}
@@ -128,7 +129,7 @@ class ResponsiveDrawer extends React.Component {
         </Hidden>
         <main className={classes.content}>
           <div className={classes.toolbar} />
-          <Typography noWrap>اخبار و رویدادها:</Typography>
+          {this.props.children}
         </main>
       </div>
     );
